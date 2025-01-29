@@ -297,7 +297,7 @@ public class AccommodationService {
     }
 
     public List<Map<String, Object>> searchDocuments(String field, String value) throws IOException {
-        ensureIndexExists();-
+        // ensureIndexExists();
         SearchRequest searchRequest = new SearchRequest(INDEX);
         searchRequest.source(new SearchSourceBuilder().query(QueryBuilders.matchQuery(field, value)));
 
